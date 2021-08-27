@@ -1,4 +1,4 @@
-# Newspage
+# Newspage-
 
 
 ## Context
@@ -10,9 +10,10 @@ Leertaak: HP2 Beyco Newspage. Deze leertaak hoort bij sprint The Campaign. Dit i
 *In de briefing staat wat de opdracht is en wat de opdrachtgever wil.*
 
 {Beschrijf de opdrachtgever / het project}
+HP2 is een bedrijf dat bestaat uit young professionals die in samenwerking met studenten toffe projecten realiseert, waaronder het project Beyco: Beyond Coffee. Beyco is een handelsplatform voor koffie over de hele wereld. Een belangrijk onderdeel van internationale handel is de communicatie, maar dat gaat nog niet zo soepel. Beyco wil graag middels nieuwsberichten kunnen vertellen waar zij zoal mee bezig zijn. Momenteel kun je ergens onderin de footer de laatste nieuwsbrief downloaden, maar die wordt nauwelijks gebruikt.
 
 {Beschrijf de opdracht}
-
+Ontwikkel een nieuwspagina waarin Beyco haar klanten op de hoogte kan houden van de laatste ontwikkelingen op het platform en in hun organisatie.
 
 ## Doel van deze opdracht
 *Wat leer je in deze taak.*

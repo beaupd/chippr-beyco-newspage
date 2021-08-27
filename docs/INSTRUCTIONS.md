@@ -1,18 +1,18 @@
-# {Naam}
+# Newspage
 
-De conventie voor naamgeving is opdrachtgever-opdracht-ondersteuningsniveau
-Topics: opdrachtgever-naam, semester-naam, sprint-naam, niveau-naam
 
 ## Context
-*Bij welke sprint hoort deze leertaak en welk niveau heeft deze leertaak.*
+Voor Beyco wordt een nieuwspagina gerealiseerd.
 
-Leertaak: {Beschrijving van de leertaak}. Deze leertaak hoort bij {sprint # "titel van de sprint}. Dit is een {niveau van de opdracht} die je {individueel, in team} uitvoert voor {opdrachtgever}
+Leertaak: HP2 Beyco Newspage. Deze leertaak hoort bij sprint The Campaign. Dit is een autonome opdracht die je individueel uitvoert voor HP2.
 
 ## Briefing
 *In de briefing staat wat de opdracht is en wat de opdrachtgever wil.*
 
-{Beschrijf de opdrachtgever}
+{Beschrijf de opdrachtgever / het project}
+
 {Beschrijf de opdracht}
+
 
 ## Doel van deze opdracht
 *Wat leer je in deze taak.*

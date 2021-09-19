@@ -1,5 +1,4 @@
-# Newspage-
-
+# Beyco Newspage
 
 ## Context
 Voor Beyco wordt een nieuwspagina gerealiseerd.

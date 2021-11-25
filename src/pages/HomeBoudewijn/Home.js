@@ -4,10 +4,12 @@ import { useState } from "react";
 // Import articles
 import Articles from '../../components/Articles/Articles';
 
-const Home = () => {
+const HomeB = () => {
     return (
         <>
-        
+            
         </>
     )
 }
+
+export default HomeB

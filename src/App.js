@@ -13,6 +13,7 @@ import Header from './components/Header/Header';
 
 // Import pages
 import Home from './pages/HomeBeau/Home';
+import HomeB from './pages/HomeBoudewijn/Home';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />}></Route>
+                <Route path="/home_boudewijn" element={<HomeB />}></Route>
             </Routes>
         </Router>
     )

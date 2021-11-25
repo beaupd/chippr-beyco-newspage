@@ -13,6 +13,7 @@ import Header from './components/Header/Header';
 
 // Import pages
 import Home from './pages/Home/Home';
+import ArticleInner from './pages/ArticleInner/ArticleInner';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />}></Route>
+                <Route path="/article" element={<ArticleInner />}></Route>
             </Routes>
         </Router>
     )

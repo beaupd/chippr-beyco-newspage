@@ -21,7 +21,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Kumbh Sans", sans-serif;
   }
 
-
   .btn {
     padding: 12.75px 25.5px;
     border-radius: 3.4px;
@@ -46,15 +45,6 @@ const GlobalStyle = createGlobalStyle`
   .btn:hover {
     box-shadow: 0 0 0 0.33rem var(--color-primary-transparent);
   }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html, body {
-      font-family: "Kumbh Sans", sans-serif;
-      background: #EBF2F1;
-    }
 `;
 
 export default GlobalStyle;

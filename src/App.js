@@ -12,7 +12,7 @@ import {
 import Header from './components/Header/Header';
 
 // Import pages
-import Home from './pages/Home/Home';
+import Home from './pages/HomeBeau/Home';
 
 function App() {
     return (

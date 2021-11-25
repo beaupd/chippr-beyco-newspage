@@ -12,8 +12,8 @@ import {
 import Header from './components/Header/Header';
 
 // Import pages
-import Home from './pages/Home/Home';
-import ArticleInner from './pages/ArticleInner/ArticleInner';
+import Home from './pages/HomeBeau/Home';
+import ArticleInner from "./pages/ArticleInner/ArticleInner";
 
 function App() {
     return (

@@ -1,7 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-
   :root {
     --color-primary: #397f6e;
     --color-primary-transparent: rgba(57, 127, 110, 0.2);
@@ -47,6 +46,15 @@ const GlobalStyle = createGlobalStyle`
   .btn:hover {
     box-shadow: 0 0 0 0.33rem var(--color-primary-transparent);
   }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      font-family: "Kumbh Sans", sans-serif;
+      background: #EBF2F1;
+    }
 `;
 
 export default GlobalStyle;

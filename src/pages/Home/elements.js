@@ -25,10 +25,9 @@ export const Banner = styled.section`
   } */
 
 `
-
 export const Searchbar = styled.div`
   position: absolute;
-  
+  z-index: 1000;
   top: calc(40vh + 80px);
   left: 50%;
   transform: translate(-50%, -50%);

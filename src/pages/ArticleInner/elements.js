@@ -5,26 +5,44 @@ export const Banner = styled.section`
   background-image: url(${ArticleImgBanner});
   background-size: cover;
   background-position: center center;
-  height: 25vh;
+  height: 35vh;
+
+  @media (orientation: landscape) {
+    height: 35vh;
+  }
 `
 
 export const ArticleWrapper = styled.section`
-  width: 50vw;
+  //width: auto;
+  padding: 0 .75rem;
+  
   margin: 0 auto;
+  max-width: 38em;
+  
+  //@media (orientation: landscape) {
+  //  margin: 0 2rem;
+  //}
 `
 
 export const ArticleTitle = styled.h2`
   background: #EBF2F1;
   margin-top: -35px;
-  padding: 1rem 1.75rem;
-  font-size: 2rem;
+  //padding: 1rem 1.75rem;
+  font-size: 1.8rem;
   border-radius: 5px;
   margin-bottom: 1rem;
+  
+  padding: 6vw;
+  
+  @media (min-width: 40em) {
+    padding: 1.5rem 1.5rem;
+  }
 `
 
 export const ArticleBody = styled.div`
-  padding: 0 1.75rem;
-
+  //padding: 0 1.75rem;
+  margin: 0 .75rem;
+  
   p {
     margin-top: 1rem;
     font-family: "Assistant", sans-serif;
@@ -59,7 +77,8 @@ export const ArticleQuickLinks = styled.div`
 
   div:nth-child(2) {
     margin-left: auto;
-
+    margin-top: .5rem;
+  
     img {
       width: 24px;
       height: auto;

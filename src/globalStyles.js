@@ -10,13 +10,13 @@ const GlobalStyle = createGlobalStyle`
     --color-lightgreen: #ebf2f1;
     --color-white: #fff;
   }
-
+  
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-
+  
   h1, h2, h3 {
     font-family: "Kumbh Sans", sans-serif;
   }

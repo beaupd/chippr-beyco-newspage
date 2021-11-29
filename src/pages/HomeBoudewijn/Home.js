@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { articleData } from './data.js';
 import { motion } from "framer-motion";
 
@@ -11,6 +11,8 @@ import {
     ArticlesContainer,
     Filters,
     FilterTitle,
+    FilterCategory,
+    FilterItem,
 } from './elements';
 
 const container = {
@@ -38,8 +40,19 @@ const item = {
 }
 
 const HomeB = () => {
+    const [isSmall, setSmall] = useState(false);
 
-
+    useEffect(() => {
+        const resizeHandler = () => {
+            if (window.innerWidth < 900) setSmall(true)
+            else setSmall(false)
+        }
+        resizeHandler()
+        window.addEventListener("resize", resizeHandler);
+        return () => {
+            window.removeEventListener("resize", resizeHandler);
+        }
+    })
     return (
         <Container>
             <HeroBanner>
@@ -72,19 +85,100 @@ const HomeB = () => {
                     <FilterTitle>
                         Filters
                     </FilterTitle>
+
+                    <FilterCategory>
+                        <h4>Category</h4>
+
+                        <FilterItem>
+                        <input type="radio" />
+                        <span>General</span>
+                        </FilterItem>
+                        <FilterItem>
+                        <input type="radio" />
+                        <span>Coffee</span>
+                        </FilterItem>
+                        <FilterItem>
+                        <input type="radio" />
+                        <span>Others</span>
+                        </FilterItem>
+                    </FilterCategory>
+
+                    <FilterCategory>
+                        <h4>Date</h4>
+
+                        <FilterItem>
+                        <input type="radio" />
+                        <span>Today</span>
+                        </FilterItem>
+                        <FilterItem>
+                        <input type="radio" />
+                        <span>Newest</span>
+                        </FilterItem>
+                        <FilterItem>
+                        <input type="radio" />
+                        <span>Oldest</span>
+                        </FilterItem>
+                        <FilterItem>
+                        <input type="radio" />
+                        <span>Others</span>
+                        </FilterItem>
+                    </FilterCategory>
+
+                    <FilterCategory>
+                        <h4>Author</h4>
+
+                        <FilterItem>
+                        <input type="radio" />
+                        <span>Beyco</span>
+                        </FilterItem>
+                        <FilterItem>
+                        <input type="radio" />
+                        <span>External</span>
+                        </FilterItem>
+                        <FilterItem>
+                        <input type="radio" />
+                        <span>Others</span>
+                        </FilterItem>
+                    </FilterCategory>
                 </Filters>
 
                 <Articles>
                     {articleData.map((data, i) => {
                         if (i === 0) {
-                            return (
-                                <article className="recent_article" key={data.id}>
-                                    <header>
-                                        <span>{data.category}</span>
-                                        <h2>{data.title}</h2>
-                                    </header>
-                                </article>
-                            )
+                            if (!isSmall) {
+                                return (
+                                    <article className="recent_article" key={data.id}>
+                                        <header>
+                                            <span>{data.category}</span>
+                                            <h2>{data.title}</h2>
+                                        </header>
+                                    </article>
+                                )
+                            } else {
+                                return (
+                                    <motion.article
+                                        className="article"
+                                        key={data.id}
+                                        variants={item}
+                                    >
+                                        <div className="article_img">
+                                        </div>
+
+                                        <div className="article_content">
+                                            <header>
+                                                <span>{data.category}</span>
+                                                <h2>{data.title}</h2>
+                                            </header>
+
+                                            <hr />
+
+                                            <p>{data.body}</p>
+
+                                            <button className="btn full">Read more</button>
+                                        </div>
+                                    </motion.article>
+                                )
+                            }
                         } else {
                             return (
                                 <motion.article

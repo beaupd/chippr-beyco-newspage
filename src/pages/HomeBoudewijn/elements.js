@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import articleBackground from "./ArticleInnerBanner.png";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 export const Container = styled.div`
     background: #F6F7F9;
@@ -102,38 +102,52 @@ export const Filters = styled.div`
     background-color: #fff;
     position: sticky;
     align-self: flex-start;
-    top: 120px;
+    top: 100px;
     left: 0;
     grid-column: 1;
     padding: 1rem 1rem;
-    margin: 0 1rem;
+    margin: 0 2rem;
 `
 
 export const FilterTitle = styled.h3`
     font-family: "Assisant", sans-serif;
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     border-bottom: 1px solid #EBF2F1;
+    padding-bottom: .5rem;
 `
 
+export const FilterCategory = styled.ul`
+    font-family: "Assistant", sans-serif;
+    margin-top: 1rem;
+    list-style: none;
+
+    h4 {
+        font-weight: 400;
+        font-size: 1rem;
+        color: #397F6E;
+    }
+`
+
+export const FilterItem = styled.li`
+    
+`
 
 export const Articles = styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto;
     grid-column: 2;
 
-    grid-gap: 20px;
-
-    @media (min-width: 600px){
-        flex-direction: row;
-    }
+    grid-row-gap: 20px;
 
     @media (min-width: 900px) {
         grid-template-columns: auto auto auto;
+        grid-gap: 20px;
     }
 
     .recent_article {
+        
         grid-column: 1 / 4;
         background-image: url(${articleBackground});
         background-size: cover;
@@ -143,7 +157,7 @@ export const Articles = styled.div`
         display:flex;
         justify-content: start;
         align-items: flex-end;
-        padding: 20px 25px;
+        
         height: 150px;
         border-radius: 10px;
         position: relative;
@@ -153,6 +167,7 @@ export const Articles = styled.div`
         header {
             color: white;
             z-index: 100;
+            padding: 20px 25px;
 
             span {
                 background: #397F6E;
@@ -182,16 +197,26 @@ export const Articles = styled.div`
         border-radius: 7px;
         overflow: hidden;
         background: white;
+        
+        @media (max-width: 900px){
+            display: grid; 
+            grid-template-columns: 25% auto;
+        }
 
         @media (min-width: 900px) {
             grid-column: auto;
         }
 
         .article_img {
-            max-width: 100%;
-            height: 120px;
+            @media (max-width: 900px){
+                height: 100%;
+                grid-column: 1;
+                background-position: center;
+                background-size: cover;
+            }
             @media (min-width: 900px) {
                 height: 90px;
+                max-width: 100%;
             }
             
             background: url(${articleBackground});

@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 17px;
   }
   
-  h1, h2, h3 {
+  h1, h2, h3, h4, h5 {
     font-family: "Kumbh Sans", sans-serif;
   }
 

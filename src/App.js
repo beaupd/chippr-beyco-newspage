@@ -10,14 +10,12 @@ import {
 
 // Import global elements
 import Header from './components/Header/Header';
+import NotFound from './components/NotFound/NotFound';
 
 // Import pages
 import Home from './pages/HomeBeau/Home';
-
 import HomeB from './pages/HomeBoudewijn/Home';
-
 import ArticleInner from "./pages/ArticleInner/ArticleInner";
-
 
 function App() {
     return (
@@ -25,7 +23,8 @@ function App() {
             <GlobalStyle />
             <Header />
             <Routes>
-                <Route path="/" element={<Home />}></Route>
+                <Route path="*" element={<NotFound />} />
+                <Route path="/" element={<HomeB />}></Route>
                 <Route path="/home_boudewijn" element={<HomeB />}></Route>
                 <Route path="/article" element={<ArticleInner />}></Route>
             </Routes>

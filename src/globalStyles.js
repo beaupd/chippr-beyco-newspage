@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
+  body {
+    font-size: 17px;
+  }
   
   h1, h2, h3 {
     font-family: "Kumbh Sans", sans-serif;

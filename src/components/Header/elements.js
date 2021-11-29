@@ -14,10 +14,12 @@ export const Navigation = styled.header`
   height: 5rem;
   padding: 1rem;
   position: absolute;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
   background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
   &.sticky {
     position: fixed;

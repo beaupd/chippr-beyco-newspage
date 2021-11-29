@@ -1,5 +1,6 @@
 import React from 'react';
 import { articleData } from './data.js';
+import { motion } from "framer-motion";
 
 import {
     HeroBanner,
@@ -11,12 +12,38 @@ import {
     Filters
 } from './elements';
 
+const container = {
+    hidden: {
+        opacity: 0
+    },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.3,
+            delayChildren: .3
+        }
+    }
+}
+
+const item = {
+    hidden: {
+        opacity: 0,
+        y: 50
+    },
+    show: {
+        opacity: 1,
+        y: 0
+    }
+}
+
 const HomeB = () => {
+
+
     return (
         <Container>
             <HeroBanner>
                 <HeroText>
-                    Want to read<br /> our best news articles?
+                    Want to read<br /> Our best news articles?
                     <span><br />Find them now!</span>
                 </HeroText>
 
@@ -30,38 +57,56 @@ const HomeB = () => {
                             <line x1="21" y1="21" x2="15" y2="15" />
                         </svg>
 
+
                     </form>
                 </SearchBar>
             </HeroBanner>
 
-
-            <ArticlesContainer >
+            <ArticlesContainer
+                variants={container}
+                initial="hidden"
+                animate="show"
+            >
                 <Filters>
-
+                    test
                 </Filters>
 
                 <Articles>
                     {articleData.map((data, i) => {
                         if (i === 0) {
                             return (
-                            <div className="recent_article" key={data.id}>
-                                <heading>
-                                    <span>{data.category}</span>
-                                    <h2>{data.id}</h2>
-                                </heading>
-                            </div>
+                                <article className="recent_article" key={data.id}>
+                                    <header>
+                                        <span>{data.category}</span>
+                                        <h2>{data.title}</h2>
+                                    </header>
+                                </article>
                             )
                         } else {
                             return (
-                            <div key={data.id}>
-                                <heading>
-                                    <span>{data.category}</span>
-                                    <h2>{data.id}</h2>
-                                </heading>
-                            </div>
+                                <motion.article
+                                    className="article"
+                                    key={data.id}
+                                    variants={item}
+                                >
+                                    <div className="article_img">
+                                    </div>
+
+                                    <div className="article_content">
+                                        <header>
+                                            <span>{data.category}</span>
+                                            <h2>{data.title}</h2>
+                                        </header>
+
+                                        <hr />
+
+                                        <p>{data.body}</p>
+
+                                        <button className="btn full">Read more</button>
+                                    </div>
+                                </motion.article>
                             )
                         }
-                        console.log(data);
                     })}
                 </Articles>
             </ArticlesContainer>

@@ -89,27 +89,38 @@ export const SearchBar = styled.div`
 export const ArticlesContainer = styled(motion.section)`
     width: 100%;
     display: grid;
-    grid-template-columns: 15% 70% 15%;
+    grid-template-columns: 20% 60% 20%;
+    @media(min-width: 1600px) {
+        grid-template-columns: 25% 50% 25%; 
+    }
     padding: 75px 0;
 
 `
 
 export const Filters = styled.div`
+    border-radius: 5px;
     background-color: #fff;
     position: sticky;
     align-self: flex-start;
     top: 120px;
     left: 0;
     grid-column: 1;
-    padding: 2rem 2rem;
-    margin-right: 2rem 0;
+    padding: 1rem 1rem;
+    margin: 0 1rem;
+`
+
+export const FilterTitle = styled.h3`
+    font-family: "Assisant", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #EBF2F1;
 `
 
 
 export const Articles = styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: auto auto auto;
     grid-column: 2;
 
     grid-gap: 20px;

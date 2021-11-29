@@ -9,7 +9,8 @@ import {
     HeroText,
     Articles,
     ArticlesContainer,
-    Filters
+    Filters,
+    FilterTitle,
 } from './elements';
 
 const container = {
@@ -68,7 +69,9 @@ const HomeB = () => {
                 animate="show"
             >
                 <Filters>
-                    filter
+                    <FilterTitle>
+                        Filters
+                    </FilterTitle>
                 </Filters>
 
                 <Articles>

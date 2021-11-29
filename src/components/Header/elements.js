@@ -110,3 +110,22 @@ export const MobileMenu = styled(motion.div)`
   }
 
 `
+
+export const LinkContainer = styled(motion.ul)`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 150px;
+
+  a {
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+  }
+`

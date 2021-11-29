@@ -12,8 +12,37 @@ import {
     NavBtns,
     Placeholder,
     MobileMenu,
-    MobileToggle
+    MobileToggle,
+    LinkContainer
 } from './elements';
+
+const container = {
+    hidden: {
+        opacity: 0
+    },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            delayChildren: .2
+        }
+    }
+}
+
+const item = {
+    hidden: {
+        opacity: 0,
+        y: "100%"
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: .4,
+            ease: "easeIn"
+        }
+    }
+}
 
 const Header = () => {
     const navRef = useRef();
@@ -23,8 +52,10 @@ const Header = () => {
 
     useEffect(() => {
         const scrollHandler = () => {
-            if (window.pageYOffset > navRef.current.offsetHeight && !isSticky) setSticky(true)
-            else if (window.pageYOffset === 0 && isSticky) setSticky(false)
+            if (!menuActive) {
+                if (window.pageYOffset > navRef.current.offsetHeight && !isSticky) setSticky(true)
+                else if (window.pageYOffset === 0 && isSticky) setSticky(false)
+            }
         }
         const resizeHandler = () => {
             if (window.innerWidth < 1000) setMobile(true)
@@ -124,7 +155,7 @@ const Header = () => {
                         </NavItems>
 
                         {/* Nav btns */}
-                        <MobileToggle onClick={() => setMenuActive(!menuActive)}>
+                        <MobileToggle onClick={() => {setMenuActive(!menuActive);setSticky(true)}}>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 159.6" id="menu-icon">
                                 <path d="M0 143.8h224v15.8H0zM0 0h224v15.8H0zM0 71.9h224v15.8H0z">
                                 </path>
@@ -140,7 +171,7 @@ const Header = () => {
                                             opacity: 1,
                                             transition: {
                                                 when: "beforeChildren",
-                                                staggerChildren: 0.3
+                                                staggerChildren: 0.2
                                             }
                                         },
                                         hidden: {
@@ -157,31 +188,37 @@ const Header = () => {
                                     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" key="svg_background">
                                         <motion.circle cx="100" cy="-10" r="1" initial={{ cx: 100, cy: "-10", r: 1 }} animate={{ r: 500 }} exit={{ cx: 100, cy: "-10", r: 1 }} transition={{ duration: 1 }} fill="white" />
                                     </svg>
-                                    
 
-                                    <motion.Link to="/">
-                                        Home
-                                    </motion.Link>
+                                    <LinkContainer
+                                        variants={container}
+                                        initial="hidden"
+                                        animate="show"
+                                        exit="hidden"
+                                    >
+                                        <motion.a key="item1" variants={item} className="btn" to="/">
+                                            Home
+                                        </motion.a>
 
-                                    <motion.Link to="/">
-                                        Coffee
-                                    </motion.Link>
+                                        <motion.a key="item2" variants={item} className="btn" to="/">
+                                            Coffee
+                                        </motion.a>
 
-                                    <motion.Link to="/">
-                                        For Whome?
-                                    </motion.Link>
+                                        <motion.a key="item3" variants={item} className="btn" to="/">
+                                            For Whome?
+                                        </motion.a>
 
-                                    <motion.Link to="/">
-                                        Contact
-                                    </motion.Link>
+                                        <motion.a key="item4" variants={item} className="btn" to="/">
+                                            Contact
+                                        </motion.a>
 
-                                    <motion.Link to="/">
-                                        FaQ
-                                    </motion.Link>
+                                        <motion.a key="item5" variants={item} className="btn" to="/">
+                                            FaQ
+                                        </motion.a>
 
-                                    <motion.Link to="/article">
-                                        New article (TEST)
-                                    </motion.Link>
+                                        <motion.a key="item6" variants={item} className="btn" to="/article">
+                                            New article (TEST)
+                                        </motion.a>
+                                    </LinkContainer>
 
                                 </MobileMenu>
                             }

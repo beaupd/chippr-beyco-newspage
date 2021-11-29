@@ -35,7 +35,7 @@ export const NavMenu = styled.nav`
   position: relative;
 
   button {
-    border: none;
+    
     background: none;
     /* width: 1rem; */
     right: 1.5rem;
@@ -43,6 +43,7 @@ export const NavMenu = styled.nav`
   }
 
   #menu-icon {
+    border: none;
     fill: #397F6E;
     height: 1rem;
   }
@@ -89,6 +90,7 @@ export const Placeholder = styled.div`
 
 export const MobileToggle = styled.button`
   z-index: 9999;
+  border: none;
 `
 
 export const MobileMenu = styled(motion.div)`

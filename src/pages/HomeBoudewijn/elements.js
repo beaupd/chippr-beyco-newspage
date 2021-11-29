@@ -88,36 +88,38 @@ export const SearchBar = styled.div`
 
 export const ArticlesContainer = styled(motion.section)`
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
     padding: 75px 0;
-    justify-content: center;
+
 `
 
 export const Filters = styled.div`
     background-color: #fff;
     position: sticky;
-    left: 15px;
-    top: 15px;
+    align-self: flex-start;
+    top: 120px;
+    left: 0;
+    grid-column: 1;
+    padding: 2rem 2rem;
+    margin-right: 2rem 0;
 `
+
 
 export const Articles = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: 20% 60% 20%;
+    grid-column: 2;
 
     grid-gap: 20px;
 
     @media (min-width: 600px){
-        width: 80%;
         flex-direction: row;
     }
 
     @media (min-width: 900px) {
         grid-template-columns: auto auto auto;
-    }
-
-    @media (min-width: 1000px) {
-        width: 70%;
     }
 
     .recent_article {

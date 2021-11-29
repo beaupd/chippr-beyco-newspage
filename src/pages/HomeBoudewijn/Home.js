@@ -68,7 +68,7 @@ const HomeB = () => {
                 animate="show"
             >
                 <Filters>
-                    test
+                    filter
                 </Filters>
 
                 <Articles>

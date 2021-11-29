@@ -81,11 +81,14 @@ const HomeB = () => {
                 initial="hidden"
                 animate="show"
             >
+
+                {/* Filters */}
                 <Filters>
                     <FilterTitle>
                         Filters
                     </FilterTitle>
 
+                    {/* Filter Category */}
                     <FilterCategory>
                         <h4>Category</h4>
 
@@ -103,6 +106,7 @@ const HomeB = () => {
                         </FilterItem>
                     </FilterCategory>
 
+                    {/* Filter date */}
                     <FilterCategory>
                         <h4>Date</h4>
 
@@ -124,6 +128,7 @@ const HomeB = () => {
                         </FilterItem>
                     </FilterCategory>
 
+                    {/* Filter author */}
                     <FilterCategory>
                         <h4>Author</h4>
 

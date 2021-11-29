@@ -130,10 +130,11 @@ export const FilterCategory = styled.ul`
 `
 
 export const FilterItem = styled.li`
-    -webkit-appearance: none;
-    border: .1em solid #dddee0;
-    border-radius: 50%;
-    cursor: pointer;
+    font-size: 1rem;
+
+    input {
+        margin-right: 5px;
+    }
 `
 
 export const Articles = styled.div`

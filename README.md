@@ -29,3 +29,15 @@ Dit project is gemaakt met ReactJS. Verder staat hieronder een korte lijst met g
 - 📍 React router
 - ⌚ Styled Components
 - 📲 JavaScript
+
+## 📥 Installatie
+
+1. Clone of download deze respository.
+2. Ga naar de root directory van het project.
+3. Voer in de root directory het commando: `npm install` uit om alle dependencies te installeren.
+
+## Gebruik
+
+## Handige links
+
+[Wiki](https://github.com/beaupd/chippr-beyco-newspage/wiki)

@@ -15,7 +15,7 @@ Dit project omvat een nieuwspagina voor [beyco.nl](https://beyco.nl)
 
 ## ⚡ Kenmerken
 
-Dit project is gemaakt met `React JS`. Verder staat hieronder een korte lijst met gebruikte tools en middelen.
+Dit project is gemaakt met ReactJS. Verder staat hieronder een korte lijst met gebruikte tools en middelen.
 
 **Tools:**
 

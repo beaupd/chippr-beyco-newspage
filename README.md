@@ -74,7 +74,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## 📖 Bronnen 
 [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
+<br>
 [Styled Components](https://styled-components.com/)
+<br>
 [React Router](https://reactrouter.com/)
 
 ## 🔓 Licentie

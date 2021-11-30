@@ -1,4 +1,4 @@
-# Beyco Newspage door Beau & Boudewijn van FDND
+# Beyco Newspage door Beau & Boudewijn
 ![Mockup met gedesignede articles page](assets/mockup_articles.jpg)
 
 Dit project omvat een nieuwspagina voor [beyco.nl](https://beyco.nl)

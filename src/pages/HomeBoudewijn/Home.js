@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { articleData } from './data.js';
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 import {
     HeroBanner,
@@ -70,8 +71,6 @@ const HomeB = () => {
                             <circle cx="10" cy="10" r="7" />
                             <line x1="21" y1="21" x2="15" y2="15" />
                         </svg>
-
-
                     </form>
                 </SearchBar>
             </HeroBanner>
@@ -93,16 +92,16 @@ const HomeB = () => {
                         <h4>Category</h4>
 
                         <FilterItem>
-                        <input type="radio" />
-                        <span>General</span>
+                            <input type="radio" />
+                            <span>General</span>
                         </FilterItem>
                         <FilterItem>
-                        <input type="radio" />
-                        <span>Coffee</span>
+                            <input type="radio" />
+                            <span>Coffee</span>
                         </FilterItem>
                         <FilterItem>
-                        <input type="radio" />
-                        <span>Others</span>
+                            <input type="radio" />
+                            <span>Others</span>
                         </FilterItem>
                     </FilterCategory>
 
@@ -111,20 +110,20 @@ const HomeB = () => {
                         <h4>Date</h4>
 
                         <FilterItem>
-                        <input type="radio" />
-                        <span>Today</span>
+                            <input type="radio" />
+                            <span>Today</span>
                         </FilterItem>
                         <FilterItem>
-                        <input type="radio" />
-                        <span>Newest</span>
+                            <input type="radio" />
+                            <span>Newest</span>
                         </FilterItem>
                         <FilterItem>
-                        <input type="radio" />
-                        <span>Oldest</span>
+                            <input type="radio" />
+                            <span>Oldest</span>
                         </FilterItem>
                         <FilterItem>
-                        <input type="radio" />
-                        <span>Others</span>
+                            <input type="radio" />
+                            <span>Others</span>
                         </FilterItem>
                     </FilterCategory>
 
@@ -133,16 +132,16 @@ const HomeB = () => {
                         <h4>Author</h4>
 
                         <FilterItem>
-                        <input type="radio" />
-                        <span>Beyco</span>
+                            <input type="radio" />
+                            <span>Beyco</span>
                         </FilterItem>
                         <FilterItem>
-                        <input type="radio" />
-                        <span>External</span>
+                            <input type="radio" />
+                            <span>External</span>
                         </FilterItem>
                         <FilterItem>
-                        <input type="radio" />
-                        <span>Others</span>
+                            <input type="radio" />
+                            <span>Others</span>
                         </FilterItem>
                     </FilterCategory>
                 </Filters>
@@ -191,6 +190,7 @@ const HomeB = () => {
                                     key={data.id}
                                     variants={item}
                                 >
+
                                     <div className="article_img">
                                     </div>
 

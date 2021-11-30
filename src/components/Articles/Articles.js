@@ -1,4 +1,7 @@
 import React from 'react';
+
+import {Link} from 'react-router-dom';
+
 import {
     Article,
     ArticleContainer
@@ -32,15 +35,12 @@ const item = {
 }
 
 const Articles = () => {
-
-
-
     return (
         <>
             <ArticleContainer variants={container} initial="hidden" animate="show">
                 {articleData.map(data => (
                     <Article key={data.id} variants={item}>
-                        <a href={`/article/${data.id}`} className="articleContainer">
+                        <Link to={`/article/${data.id}`} className="articleContainer">
                             <div className="imageContainer">
                                 <img src={articleImage} />
                             </div>
@@ -48,9 +48,9 @@ const Articles = () => {
                                 <h2>{data.title}</h2>
                                 <h3>{data.subtitle}</h3>
                                 <p>{data.body}</p>
-                                <a href={`/article/${data.id}`}>Read more · {data.read_time}</a>
+                                <Link to={`/article/${data.id}`}>Read more · {data.read_time}</Link>
                             </div>
-                        </a>
+                        </Link>
                     </Article>
                 ))}
             </ArticleContainer>

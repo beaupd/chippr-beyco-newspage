@@ -10,13 +10,14 @@ export const Container = styled.div`
 export const HeroBanner = styled.div`
     height: 200px;
     background: #ebf2f1;
-    @media (min-width: 500px) {
-        height: 300px;
-    }
     display: flex;
     justify-content: end;
     align-items: center;
     flex-direction: column;
+
+    @media (min-width: 500px) {
+        height: 300px;
+    }
 `
 
 export const HeroText = styled.h1`
@@ -32,7 +33,6 @@ export const HeroText = styled.h1`
         font-size: 3.2rem;
     }
 
-
     span {
         color: #397F6E;
     }
@@ -40,12 +40,6 @@ export const HeroText = styled.h1`
 
 export const SearchBar = styled.div`
     width: 90%;
-    @media (min-width: 500px) {
-        width: 80%;
-    }
-    @media (min-width: 900px) {
-        width: 45%;
-    }
     height: 60px;
     border-radius: 1rem;
     overflow: hidden;
@@ -84,17 +78,25 @@ export const SearchBar = styled.div`
         margin: auto;
         bottom: 0;
     }
+
+    @media (min-width: 500px) {
+        width: 80%;
+    }
+
+    @media (min-width: 900px) {
+        width: 45%;
+    }
 `
 
 export const ArticlesContainer = styled(motion.section)`
     width: 100%;
     display: grid;
     grid-template-columns: 20% 60% 20%;
+    padding: 75px 0;
+
     @media(min-width: 1600px) {
         grid-template-columns: 25% 50% 25%; 
     }
-    padding: 75px 0;
-
 `
 
 export const Filters = styled.div`
@@ -126,6 +128,7 @@ export const FilterCategory = styled.ul`
         font-weight: 400;
         font-size: 1rem;
         color: #397F6E;
+        margin-bottom: .5rem;
     }
 `
 
@@ -151,7 +154,6 @@ export const Articles = styled.div`
     }
 
     .recent_article {
-        
         grid-column: 1 / 4;
         background-image: url(${articleBackground});
         background-size: cover;
@@ -162,11 +164,9 @@ export const Articles = styled.div`
         justify-content: start;
         align-items: flex-end;
         
-        height: 150px;
+        height: 200px;
         border-radius: 10px;
         position: relative;
-
-
 
         header {
             color: white;
@@ -175,12 +175,14 @@ export const Articles = styled.div`
 
             span {
                 background: #397F6E;
-                padding: 4px;
+                padding: 6px;
                 border-radius: 3px;
+                font-family: "Kumbh Sans", sans-serif;
             }
 
             h2 {
-                margin-top: 5px;
+                margin-top: 15px;
+                font-size: 2rem;
             }
         }
         
@@ -219,7 +221,7 @@ export const Articles = styled.div`
                 background-size: cover;
             }
             @media (min-width: 900px) {
-                height: 90px;
+                height: 125px;
                 max-width: 100%;
             }
             
@@ -254,7 +256,9 @@ export const Articles = styled.div`
             }
 
             button {
-                padding: 7px 15px;
+                padding: 7px 12px;
+                margin-top: 1rem;
+                margin-bottom: .25rem;
             }
 
             hr {

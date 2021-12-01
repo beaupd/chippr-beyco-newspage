@@ -144,13 +144,16 @@ export const Articles = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: auto;
-    grid-column: 2;
+    grid-column: 1 / 4;
+    padding: 0 10%;
 
     grid-row-gap: 20px;
 
     @media (min-width: 900px) {
         grid-template-columns: auto auto auto;
+        grid-column: 2;
         grid-gap: 20px;
+        padding: 0;
     }
 
     .recent_article {

@@ -83,69 +83,69 @@ const HomeB = () => {
 
                 {/* Filters */}
                 {!isSmall && (
-                <Filters>
-                    <FilterTitle>
-                        Filters
-                    </FilterTitle>
+                    <Filters>
+                        <FilterTitle>
+                            Filters
+                        </FilterTitle>
 
-                    {/* Filter Category */}
-                    <FilterCategory>
-                        <h4>Category</h4>
+                        {/* Filter Category */}
+                        <FilterCategory>
+                            <h4>Category</h4>
 
-                        <FilterItem>
-                            <input type="radio" />
-                            <span>General</span>
-                        </FilterItem>
-                        <FilterItem>
-                            <input type="radio" />
-                            <span>Coffee</span>
-                        </FilterItem>
-                        <FilterItem>
-                            <input type="radio" />
-                            <span>Others</span>
-                        </FilterItem>
-                    </FilterCategory>
+                            <FilterItem>
+                                <input type="radio" />
+                                <span>General</span>
+                            </FilterItem>
+                            <FilterItem>
+                                <input type="radio" />
+                                <span>Coffee</span>
+                            </FilterItem>
+                            <FilterItem>
+                                <input type="radio" />
+                                <span>Others</span>
+                            </FilterItem>
+                        </FilterCategory>
 
-                    {/* Filter date */}
-                    <FilterCategory>
-                        <h4>Date</h4>
+                        {/* Filter date */}
+                        <FilterCategory>
+                            <h4>Date</h4>
 
-                        <FilterItem>
-                            <input type="radio" />
-                            <span>Today</span>
-                        </FilterItem>
-                        <FilterItem>
-                            <input type="radio" />
-                            <span>Newest</span>
-                        </FilterItem>
-                        <FilterItem>
-                            <input type="radio" />
-                            <span>Oldest</span>
-                        </FilterItem>
-                        <FilterItem>
-                            <input type="radio" />
-                            <span>Others</span>
-                        </FilterItem>
-                    </FilterCategory>
+                            <FilterItem>
+                                <input type="radio" />
+                                <span>Today</span>
+                            </FilterItem>
+                            <FilterItem>
+                                <input type="radio" />
+                                <span>Newest</span>
+                            </FilterItem>
+                            <FilterItem>
+                                <input type="radio" />
+                                <span>Oldest</span>
+                            </FilterItem>
+                            <FilterItem>
+                                <input type="radio" />
+                                <span>Others</span>
+                            </FilterItem>
+                        </FilterCategory>
 
-                    {/* Filter author */}
-                    <FilterCategory>
-                        <h4>Author</h4>
+                        {/* Filter author */}
+                        <FilterCategory>
+                            <h4>Author</h4>
 
-                        <FilterItem>
-                            <input type="radio" />
-                            <span>Beyco</span>
-                        </FilterItem>
-                        <FilterItem>
-                            <input type="radio" />
-                            <span>External</span>
-                        </FilterItem>
-                        <FilterItem>
-                            <input type="radio" />
-                            <span>Others</span>
-                        </FilterItem>
-                    </FilterCategory>
-                </Filters>
+                            <FilterItem>
+                                <input type="radio" />
+                                <span>Beyco</span>
+                            </FilterItem>
+                            <FilterItem>
+                                <input type="radio" />
+                                <span>External</span>
+                            </FilterItem>
+                            <FilterItem>
+                                <input type="radio" />
+                                <span>Others</span>
+                            </FilterItem>
+                        </FilterCategory>
+                    </Filters>
                 )}
 
                 <Articles>

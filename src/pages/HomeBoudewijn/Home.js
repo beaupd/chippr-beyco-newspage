@@ -82,7 +82,7 @@ const HomeB = () => {
             >
 
                 {/* Filters */}
-                {isSmall && (
+                {!isSmall && (
                 <Filters>
                     <FilterTitle>
                         Filters

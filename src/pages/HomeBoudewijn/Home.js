@@ -82,6 +82,7 @@ const HomeB = () => {
             >
 
                 {/* Filters */}
+                {isSmall && (
                 <Filters>
                     <FilterTitle>
                         Filters
@@ -145,6 +146,7 @@ const HomeB = () => {
                         </FilterItem>
                     </FilterCategory>
                 </Filters>
+                )}
 
                 <Articles>
                     {articleData.map((data, i) => {
